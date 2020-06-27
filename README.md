@@ -1,4 +1,13 @@
+#First Time Setup
+Initialize git submodule:
+`git submodule init`
+`git submodule update`
 
+Setup npm depednencies:
+`npm install`
+
+Install typescript
+Ubuntu: `sudo apt install node-typescript`
 # nora-service
 NORA (https://node-red-google-home.herokuapp.com) backend service deployed in Heroku.
 
