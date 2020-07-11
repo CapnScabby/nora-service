@@ -9,6 +9,9 @@ Setup npm depednencies:
 Install typescript
 Ubuntu: `sudo apt install node-typescript`
 
+Compile the code, run in the repo root:
+`tsc`
+
 # nora-service
 NORA (https://node-red-google-home.herokuapp.com) backend service deployed in Heroku.
 

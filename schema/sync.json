@@ -119,6 +119,801 @@
             {
                 "additionalProperties": false,
                 "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            false
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "$ref": "#/definitions/OnOffState"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            false
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "$ref": "#/definitions/OnOffState"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "ack"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "ack"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "ack"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "ack"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            false
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "$ref": "#/definitions/OnOffState"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "pin"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "pin",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "pin"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "fanSpeedControl",
+                    "name",
+                    "pin",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "pin"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "pin",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "availableFanSpeedModes": {
+                        "items": {
+                            "enum": [
+                                "S1",
+                                "S2",
+                                "S3",
+                                "S4"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "fanSpeedControl": {
+                        "enum": [
+                            true
+                        ],
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "fanSpeedMode": {
+                                "$ref": "#/definitions/FanSpeedMode"
+                            },
+                            "on": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            },
+                            "speed": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "fanSpeedMode",
+                            "on",
+                            "online",
+                            "speed"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "pin"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "fan"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "availableFanSpeedModes",
+                    "fanSpeedControl",
+                    "name",
+                    "pin",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
                     "name": {
                         "type": "string"
                     },
@@ -432,6 +1227,9 @@
                         ],
                         "type": "object"
                     },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
+                    },
                     "type": {
                         "enum": [
                             "light"
@@ -495,6 +1293,9 @@
                             "online"
                         ],
                         "type": "object"
+                    },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
                     },
                     "twoFactor": {
                         "enum": [
@@ -569,6 +1370,9 @@
                             "online"
                         ],
                         "type": "object"
+                    },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
                     },
                     "twoFactor": {
                         "enum": [
@@ -677,6 +1481,9 @@
                             "online"
                         ],
                         "type": "object"
+                    },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
                     },
                     "type": {
                         "enum": [
@@ -779,6 +1586,9 @@
                         ],
                         "type": "object"
                     },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
+                    },
                     "twoFactor": {
                         "enum": [
                             "ack"
@@ -889,6 +1699,9 @@
                             "online"
                         ],
                         "type": "object"
+                    },
+                    "turnOnWhenBrightnessChanges": {
+                        "type": "boolean"
                     },
                     "twoFactor": {
                         "enum": [
@@ -2301,6 +3114,183 @@
                     "queryOnlyTemperatureSetting",
                     "state",
                     "temperatureUnit",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pausable": {
+                        "type": "boolean"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "isDocked": {
+                                "type": "boolean"
+                            },
+                            "isPaused": {
+                                "type": "boolean"
+                            },
+                            "isRunning": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "type": {
+                        "enum": [
+                            "vacuum"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "state",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pausable": {
+                        "type": "boolean"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "isDocked": {
+                                "type": "boolean"
+                            },
+                            "isPaused": {
+                                "type": "boolean"
+                            },
+                            "isRunning": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "ack"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "vacuum"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "state",
+                    "twoFactor",
+                    "type"
+                ],
+                "type": "object"
+            },
+            {
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "nicknames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "pausable": {
+                        "type": "boolean"
+                    },
+                    "pin": {
+                        "type": "string"
+                    },
+                    "roomHint": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "isDocked": {
+                                "type": "boolean"
+                            },
+                            "isPaused": {
+                                "type": "boolean"
+                            },
+                            "isRunning": {
+                                "type": "boolean"
+                            },
+                            "online": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "online"
+                        ],
+                        "type": "object"
+                    },
+                    "twoFactor": {
+                        "enum": [
+                            "pin"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "vacuum"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "pin",
+                    "state",
                     "twoFactor",
                     "type"
                 ],
@@ -2309,6 +3299,15 @@
         ]
     },
     "definitions": {
+        "FanSpeedMode": {
+            "enum": [
+                "S1",
+                "S2",
+                "S3",
+                "S4"
+            ],
+            "type": "string"
+        },
         "LockUnlockState": {
             "additionalProperties": false,
             "properties": {

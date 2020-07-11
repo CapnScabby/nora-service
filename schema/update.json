@@ -18,6 +18,15 @@
                 "$ref": "#/definitions/Partial<Thermostat>"
             },
             {
+                "$ref": "#/definitions/Partial<FanSpeedPercentState&OnOffState>"
+            },
+            {
+                "$ref": "#/definitions/Partial<FanSpeedModeState&OnOffState>"
+            },
+            {
+                "$ref": "#/definitions/Partial<FanSpeedPercentState&FanSpeedModeState&OnOffState>"
+            },
+            {
                 "$ref": "#/definitions/Partial<BrightnessState&OnOffState>"
             },
             {
@@ -28,6 +37,9 @@
             },
             {
                 "$ref": "#/definitions/Partial<Partial<Thermostat>>"
+            },
+            {
+                "$ref": "#/definitions/Partial<StartStopState&DockState>"
             }
         ]
     },
@@ -97,6 +109,70 @@
                 },
                 "online": {
                     "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "Partial<FanSpeedModeState&OnOffState>": {
+            "additionalProperties": false,
+            "properties": {
+                "fanSpeedMode": {
+                    "enum": [
+                        "S1",
+                        "S2",
+                        "S3",
+                        "S4"
+                    ],
+                    "type": "string"
+                },
+                "on": {
+                    "type": "boolean"
+                },
+                "online": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "Partial<FanSpeedPercentState&FanSpeedModeState&OnOffState>": {
+            "additionalProperties": false,
+            "properties": {
+                "fanSpeedMode": {
+                    "enum": [
+                        "S1",
+                        "S2",
+                        "S3",
+                        "S4"
+                    ],
+                    "type": "string"
+                },
+                "on": {
+                    "type": "boolean"
+                },
+                "online": {
+                    "type": "boolean"
+                },
+                "speed": {
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Partial<FanSpeedPercentState&OnOffState>": {
+            "additionalProperties": false,
+            "properties": {
+                "on": {
+                    "type": "boolean"
+                },
+                "online": {
+                    "type": "boolean"
+                },
+                "speed": {
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "number"
                 }
             },
             "type": "object"
@@ -179,6 +255,24 @@
                 },
                 "thermostatTemperatureSetpointLow": {
                     "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "Partial<StartStopState&DockState>": {
+            "additionalProperties": false,
+            "properties": {
+                "isDocked": {
+                    "type": "boolean"
+                },
+                "isPaused": {
+                    "type": "boolean"
+                },
+                "isRunning": {
+                    "type": "boolean"
+                },
+                "online": {
+                    "type": "boolean"
                 }
             },
             "type": "object"
