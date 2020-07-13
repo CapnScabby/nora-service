@@ -87,7 +87,7 @@ To create the Database Tables modify this lines:
             CREATE TABLE IF NOT EXISTS appuser (
                 uid VARCHAR(30) CONSTRAINT pk PRIMARY KEY,
                 linked boolean DEFAULT false
-            )`
+noradevtest            )`
         );
     
         await service.query('ALTER TABLE appuser ADD COLUMN IF NOT EXISTS noderedversion integer DEFAULT 1');
@@ -104,6 +104,8 @@ To create the Database Tables modify this lines:
 THAT'S IT, you are ready to deploy to Heroku! 
 Build the app and the  schema with `npm run heroku-postbuild` before deploying.
 To deploy follow the instructions from the Heroku website or if you linked your account in Heroku with Github just push to github.
+
+You must push in order to deploy, otherwiset the gitsubmodule will not be resolved
 
 ## README DISCLAIMER
 
